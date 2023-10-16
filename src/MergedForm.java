@@ -1,12 +1,11 @@
 import javax.swing.*;
+import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.UIManager.LookAndFeelInfo;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-
 
 public class MergedForm {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/my_db";
@@ -33,21 +32,28 @@ public class MergedForm {
         // Create the main frame
         JFrame frame = new JFrame("Database Search GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 600); // Set the size to 800x600
+        frame.setSize(800, 600); // Set the size to 800x600
 
         // Create a panel with a dark background
         JPanel panel = new JPanel();
         panel.setBackground(new Color(18, 30, 49));
 
-        // Create a label with white text
-        JLabel label = new JLabel("Enter Column Name:");
-        label.setForeground(Color.WHITE);
+        // Create a label with white text for table name
+        JLabel tableLabel = new JLabel("Enter Table Name:");
+        tableLabel.setForeground(Color.WHITE);
 
-        // Create an input text box
-        JTextField inputTextField = new JTextField(20);
+        // Create an input text box for table name
+        JTextField tableTextField = new JTextField(20);
+
+        // Create a label with white text for column name
+        JLabel columnLabel = new JLabel("Enter Column Name:");
+        columnLabel.setForeground(Color.WHITE);
+
+        // Create an input text box for column name
+        JTextField columnTextField = new JTextField(20);
 
         // Create an output text box
-        JTextArea outputTextArea = new JTextArea(30, 30);
+        JTextArea outputTextArea = new JTextArea(30, 70);
         outputTextArea.setBackground(new Color(18, 30, 49));
         outputTextArea.setForeground(Color.WHITE);
         outputTextArea.setLineWrap(true);
@@ -60,14 +66,17 @@ public class MergedForm {
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String columnName = inputTextField.getText();
-                searchDatabase(columnName, outputTextArea);
+                String tableName = tableTextField.getText();
+                String columnName = columnTextField.getText();
+                searchDatabase(tableName, columnName, outputTextArea);
             }
         });
 
         // Add components to the panel
-        panel.add(label);
-        panel.add(inputTextField);
+        panel.add(tableLabel);
+        panel.add(tableTextField);
+        panel.add(columnLabel);
+        panel.add(columnTextField);
         panel.add(searchButton);
         panel.add(outputTextArea);
 
@@ -81,10 +90,10 @@ public class MergedForm {
         frame.setVisible(true);
     }
 
-    private static void searchDatabase(String columnName, JTextArea outputTextArea) {
+    private static void searchDatabase(String tableName, String columnName, JTextArea outputTextArea) {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            String query = "SELECT * FROM book";
+            String query = "SELECT * FROM " + tableName;
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
