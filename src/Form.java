@@ -48,18 +48,6 @@ public class Form {
 
         // Create a button to execute the query
         JButton queryButton = new JButton("Execute Query");
-        queryButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Get the query from the input text box
-                String query = inputTextField.getText();
-                // Simulate executing the query (replace this with your database query)
-                String result = "Query executed: " + query;
-
-                // Display the result in the output text box
-                outputTextArea.setText(result);
-            }
-        });
 
         // Add components to the panel
         panel.add(label);
