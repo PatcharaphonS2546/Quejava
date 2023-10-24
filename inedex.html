@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QueJava</title>
+    <title>JSQL</title>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,55 +14,89 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="Logo" src="logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="inedex.html"><span
-                                    class="material-symbols-outlined">
-                                    home
-                                </span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" alt="Download"><span class="material-symbols-outlined">
-                                    download
-                                </span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" alt="Team"><span class="material-symbols-outlined">
-                                    groups
-                                </span></a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><span class="material-symbols-outlined">
-                                search
-                            </span></button>
-                    </form>
-                </div>
+    <!-- Header navbar  -->
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                    <img class="Logo" src="logo-removebg-preview.png" alt="">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                    <li><a href="Contact.html" class="nav-link px-2 link-body-emphasis">Team</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control" placeholder="please Enter" aria-label="Search">
+                </form>
             </div>
-        </nav>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
+                    class="text-body-secondary">It’ll blow your mind.</span></h2>
+            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose
+                here.</p>
+        </div>
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                    fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+            </svg>
+        </div>
     </div>
-    <div class="content">
-        <h1 class="MainName">JSQL</h1>
-        <p class="adText">Appication For Who want to start to learn database</p>
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="logo-removebg-preview.png" alt="" width="150" height="100">
+        <h1 class="display-5 fw-bold text-body-emphasis">JSQL</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">database ที่จะช่วยให้คุณจัดการข้อมูลของคุณได้อย่างง่ายดาย
+
+                คุณกำลังสนใจทำ database ที่จะช่วยให้คุณจัดเก็บและจัดการข้อมูลของคุณได้อย่างง่ายดายหรือไม่?
+                ถ้าอย่างนั้น JSQL
+                คือคำตอบของคุณ
+
+                JSQL คือ ทำให้การทำ database ง่ายและปลอดภัย ช่วยให้คุณสามารถสร้าง แก้ไข
+                และเข้าถึงข้อมูลของคุณได้อย่างสะดวกทุกที่ทุกเวลา
+
+                คุณสมบัติเด่นของ JSQL
+
+                ใช้งานง่าย: JSQL ออกแบบมาเพื่อให้ใช้งานง่ายแม้สำหรับผู้ที่ไม่มีความรู้ด้าน database มาก่อน
+                ปลอดภัย: JSQL ใช้ระบบการเข้ารหัสที่เข้มงวดเพื่อปกป้องข้อมูลของคุณ
+                ครอบคลุม: JSQL รองรับข้อมูลประเภทต่างๆ เช่น รายชื่อติดต่อ ข้อมูลธุรกิจ งาน และอื่นๆ อีกมากมาย
+                ดาวน์โหลด JSQL วันนี้และเริ่มต้นจัดการข้อมูลของคุณได้อย่างง่ายดาย
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-PC btn-lg px-4 gap-3"><span class="material-symbols-outlined">
+                        computer
+                    </span>for PC</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4"><span
+                        class="material-symbols-outlined">
+                        install_mobile
+                    </span>for Mobiles</button>
+            </div>
+        </div>
     </div>
-    <div class="contract">
-        <h3>Contract</h3>
-        <p>
-            Number : 098-222-2222
-            <a href=""></a>
-        </p>
+
+    <!-- footers -->
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link px-2 text-body-secondary">Team</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2023 Panyapiwat Institute of Management, Engineering and
+                Technology</p>
+        </footer>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
