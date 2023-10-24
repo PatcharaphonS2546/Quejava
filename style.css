@@ -20,6 +20,30 @@
     --bs-btn-disabled-border-color: #f94c10;
 }
 
+.row {
+    margin: 50px 0;
+}
+
 .Logo {
     width: 30%;
+}
+
+.Easy {
+    width: 500px;
+    height: 500px;
+}
+
+.security {
+    width: 500px;
+    height: 500px;
+}
+
+.User {
+    width: 500px;
+    height: 500px;
+}
+
+.Adaptation {
+    width: 500px;
+    height: 500px;
 }
